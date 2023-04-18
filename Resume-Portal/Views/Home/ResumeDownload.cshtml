@@ -1,0 +1,3 @@
+﻿@using Microsoft.AspNet.Identity
+
+@Html.ActionLink("Download Resume", "Download", new { uid = User.Identity.GetUserId()}, new { target = "_blank" })

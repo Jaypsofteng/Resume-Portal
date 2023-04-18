@@ -1,0 +1,113 @@
+﻿@Styles.Render("~/Content/cssV2")
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Resume Portal", "Student", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Programs", "AllPrograms", "Home")</li>
+                <li>@Html.ActionLink("Activities", "MyActivities", "Home")</li>
+                <li>@Html.ActionLink("ResumeHelp", "ResumeHelp", "Home")</li>
+                <li>@Html.ActionLink("Employers", "AllEmployers", "Home")</li>
+                <li>@Html.ActionLink("My Profile", "StudentProfile", "Home")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+</div>
+<div class="container footerContainer">
+
+    <a class="footerLogoLink" href="/">
+        <img class="footerLogo" xlink:href="/" src="http://mitt.ca/Themes/images/logo.png" width="130" height="60" alt="MITT Logo" />
+    </a>
+
+    <ul class="socialLinks footerSocialLinks">
+
+        <li>
+            <a href="https://twitter.com/MITTcanada" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 552.1 402" enable-background="new 0 0 552.1 402" xml:space="preserve">
+                <path fill="#015F5E" d="M410,107.4c-10.1,4.5-20.9,7.5-32.2,8.8c11.6-6.9,20.5-17.9,24.7-31c-10.8,6.4-22.8,11.1-35.6,13.6
+	c-10.2-10.9-24.8-17.7-40.9-17.7c-31,0-56.1,25.1-56.1,56.1c0,4.4,0.5,8.7,1.5,12.8c-46.6-2.3-87.9-24.7-115.6-58.6
+	c-4.8,8.3-7.6,17.9-7.6,28.2c0,19.5,9.9,36.6,25,46.7c-9.2-0.3-17.8-2.8-25.4-7c0,0.2,0,0.5,0,0.7c0,27.2,19.3,49.8,45,55
+	c-4.7,1.3-9.7,2-14.8,2c-3.6,0-7.1-0.4-10.6-1c7.1,22.3,27.9,38.5,52.4,39c-19.2,15-43.4,24-69.7,24c-4.5,0-9-0.3-13.4-0.8
+	c24.8,15.9,54.3,25.2,86,25.2c103.2,0,159.6-85.5,159.6-159.6c0-2.4-0.1-4.9-0.2-7.3C393,128.5,402.5,118.7,410,107.4z" />
+
+                    </svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/MITTcanada" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 552.1 381" enable-background="new 0 0 552.1 381" xml:space="preserve">
+                <path fill="#025F5E" d="M246.4,124.4c0,5.6,0,30.8,0,30.8h-22.5v37.6h22.5v111.8h46.3V192.7h31.1
+	c0,0,2.9-18,4.3-37.8c-4,0-35.2,0-35.2,0s0-21.9,0-25.7c0-3.8,5-9,10-9c5,0,15.5,0,25.2,0c0-5.1,0-22.8,0-39.2c-13,0-27.8,0-34.3,0
+	C245.3,81.1,246.4,118.8,246.4,124.4z" />
+
+                    </svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/mittcanada/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 552.1 381" enable-background="new 0 0 552.1 381" xml:space="preserve">
+                <path fill="#035F5E" d="M188.7,81.1h166.8c15.8,0,28.8,13,28.8,28.8v166.8c0,15.8-13,28.8-28.8,28.8H188.7
+	c-15.8,0-28.8-13-28.8-28.8V109.9C159.8,94.1,172.8,81.1,188.7,81.1z M323.3,106c-5.6,0-10.1,4.6-10.1,10.1v24.2
+	c0,5.6,4.5,10.1,10.1,10.1h25.4c5.6,0,10.1-4.5,10.1-10.1v-24.2c0-5.6-4.5-10.1-10.1-10.1H323.3z M358.9,176h-19.7
+	c1.9,6.1,2.9,12.6,2.9,19.3c0,37.3-31.2,67.6-69.8,67.6c-38.5,0-69.8-30.3-69.8-67.6c0-6.7,1-13.2,2.9-19.3h-20.6v94.8
+	c0,4.9,4,8.9,8.9,8.9H350c4.9,0,8.9-4,8.9-8.9V176z M272.3,149.2c-24.9,0-45.1,19.5-45.1,43.7c0,24.1,20.2,43.7,45.1,43.7
+	c24.9,0,45.1-19.6,45.1-43.7C317.4,168.7,297.2,149.2,272.3,149.2z" />
+
+                    </svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/channel/UC1CpWg9k0Tup2wnx0Jnmq_Q" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 552.1 381" enable-background="new 0 0 552.1 381" xml:space="preserve">
+                <path fill="#045F5E" d="M335.8,243.7h-12.2l0.1-7.1c0-3.2,2.6-5.7,5.8-5.7h0.8c3.2,0,5.8,2.6,5.8,5.7L335.8,243.7z
+	 M290,228.6c-3.1,0-5.6,2.1-5.6,4.6v34.5c0,2.5,2.5,4.6,5.6,4.6c3.1,0,5.6-2.1,5.6-4.6v-34.5C295.6,230.6,293.1,228.6,290,228.6z
+	 M364.3,209.3v65.6c0,15.7-13.6,28.6-30.3,28.6H209.3c-16.7,0-30.3-12.9-30.3-28.6v-65.6c0-15.7,13.6-28.6,30.3-28.6H334
+	C350.7,180.7,364.3,193.5,364.3,209.3z M217.7,282l0-69.1l15.5,0v-10.2l-41.2-0.1v10.1l12.9,0V282H217.7z M264,223.2h-12.9v36.9
+	c0,5.3,0.3,8,0,8.9c-1,2.9-5.8,5.9-7.6,0.3c-0.3-1,0-3.9,0-9l-0.1-37.1h-12.8l0,36.6c0,5.6-0.1,9.8,0,11.7c0.3,3.4,0.2,7.3,3.3,9.5
+	c5.8,4.2,16.9-0.6,19.7-6.6l0,7.6l10.3,0V223.2z M305.2,265.4l0-30.7c0-11.7-8.8-18.7-20.6-9.2l0.1-22.8l-12.9,0l-0.1,78.8l10.6-0.2
+	l1-4.9C296.7,288.8,305.2,280.3,305.2,265.4z M345.5,261.4l-9.7,0.1c0,0.4,0,0.8,0,1.3v5.4c0,2.9-2.4,5.2-5.3,5.2h-1.9
+	c-2.9,0-5.3-2.3-5.3-5.2v-0.6v-5.9v-7.7h22.1v-8.3c0-6.1-0.2-12.2-0.7-15.6c-1.6-11-17-12.8-24.8-7.1c-2.5,1.8-4.3,4.1-5.4,7.3
+	c-1.1,3.2-1.6,7.5-1.6,13v18.3C313,291.8,349.9,287.5,345.5,261.4z M296,162c0.7,1.6,1.7,2.9,3.1,3.9c1.4,1,3.2,1.5,5.3,1.5
+	c1.9,0,3.5-0.5,4.9-1.5c1.4-1,2.6-2.6,3.6-4.6l-0.2,5.1H327v-61.1h-11.3v47.5c0,2.6-2.1,4.7-4.7,4.7c-2.6,0-4.7-2.1-4.7-4.7v-47.5
+	h-11.8v41.2c0,5.2,0.1,8.7,0.2,10.5C294.9,158.6,295.3,160.3,296,162z M252.4,127.5c0-5.9,0.5-10.4,1.5-13.7c1-3.3,2.7-5.9,5.3-7.9
+	c2.5-2,5.8-3,9.7-3c3.3,0,6.2,0.7,8.5,1.9c2.4,1.3,4.2,3,5.5,5c1.3,2.1,2.2,4.2,2.7,6.4c0.5,2.2,0.7,5.5,0.7,10v15.4
+	c0,5.7-0.2,9.8-0.7,12.5c-0.4,2.7-1.4,5.1-2.8,7.4c-1.4,2.3-3.3,4-5.5,5.1c-2.3,1.1-4.9,1.6-7.8,1.6c-3.3,0-6-0.5-8.3-1.4
+	c-2.3-0.9-4-2.4-5.3-4.2c-1.3-1.9-2.2-4.2-2.7-6.8c-0.5-2.7-0.8-6.7-0.8-12V127.5z M263.7,151.7c0,3.5,2.6,6.3,5.7,6.3
+	c3.1,0,5.7-2.8,5.7-6.3v-32.5c0-3.5-2.6-6.3-5.7-6.3c-3.1,0-5.7,2.8-5.7,6.3V151.7z M223.9,168.2h13.5l0-46.8l16-40.1h-14.8
+	l-8.5,29.8l-8.6-29.9h-14.7l17,40.2L223.9,168.2z" />
+
+                    </svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/edu/school?id=43035" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 552.1 381" enable-background="new 0 0 552.1 381" xml:space="preserve">
+                <path fill="#055F5E" d="M398.3,215.3V300h-49.1v-79c0-19.8-7.1-33.4-24.9-33.4c-13.6,0-21.6,9.1-25.2,18
+	                    c-1.3,3.2-1.6,7.6-1.6,12V300h-49.1c0,0,0.7-133.8,0-147.7h49.1v20.9c-0.1,0.2-0.2,0.3-0.3,0.5h0.3v-0.5c6.5-10,18.2-24.4,44.2-24.4
+	                    C374.1,148.8,398.3,169.9,398.3,215.3z M197,81.1c-16.8,0-27.8,11-27.8,25.5c0,14.2,10.7,25.5,27.1,25.5h0.3
+	                    c17.1,0,27.8-11.4,27.8-25.5C224.2,92.1,213.8,81.1,197,81.1z M172.2,300h49.1V152.3h-49.1V300z" />
+
+                    </svg>
+            </a>
+        </li>
+    </ul>
+
+    <p class="footerCopyright">&copy; 2019 Manitoba Institute of Trades and Technology <a href="/privacy">Privacy & Terms</a></p>
+
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")

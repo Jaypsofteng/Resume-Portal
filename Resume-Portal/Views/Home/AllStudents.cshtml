@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Resume_Portal.Models.Profile>
+
+
+<section>
+    @foreach(var item in Model)
+    {
+        <div class="student">
+            <img src="@item.ProfilePic"/>
+            <div>
+                @Html.DisplayFor(modelItem => item.UserName)
+                @Html.ActionLink("Student Details", "StudentProfile")
+            </div>
+        </div>
+    }
+</section>
